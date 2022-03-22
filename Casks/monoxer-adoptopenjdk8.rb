@@ -2,7 +2,7 @@ cask "monoxer-adoptopenjdk8" do
   version "8,292,b10"
   sha256 "4e200bc752337abc9dbfddf125db6a600f2ec53566f6f119a83036c8242a7672"
 
-  url "https://github.com/AdoptOpenJDK/openjdk#{version.csv[0}-binaries/releases/download/jdk#{version.csv[0]}u#{version.csv[1]}-b#{version.csv[2]}/OpenJDK#{version.csv[0]}U-jdk_x64_mac_hotspot_#{version.csv[0]}u#{version.csv[1]}b#{version.csv[2]}.pkg",
+  url "https://github.com/AdoptOpenJDK/openjdk#{version.csv[0]}-binaries/releases/download/jdk#{version.csv[0]}u#{version.csv[1]}-#{version.csv[2]}/OpenJDK#{version.csv[0]}U-jdk_x64_mac_hotspot_#{version.csv[0]}u#{version.csv[1]}#{version.csv[2]}.pkg",
       verified: "https://github.com/AdoptOpenJDK"
   name "AdoptOpenJDK 8"
   desc "AdoptOpenJDK OpenJDK (Java) Development Kit"
@@ -23,4 +23,11 @@ cask "monoxer-adoptopenjdk8" do
   end
 
   uninstall pkgutil: "net.adoptopenjdk.8.jdk"
+
+  def caveats
+    <<~EOS
+      Add the following to #{shell_profile} or your desired shell configuration file:
+        export JAVA_HOME="/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home"
+    EOS
+  end
 end
