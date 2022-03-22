@@ -24,7 +24,6 @@ cask "monoxer-temurin8" do
 
   uninstall pkgutil: "net.temurin.#{version.csv[0]}.jdk"
 
-  
   def caveats
     <<~EOS
       Add the following to #{shell_profile} or your desired shell configuration file:
