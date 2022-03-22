@@ -2,9 +2,9 @@
 
 ## How do I install these formulae?
 
-`brew install monoxer/monoxer/<formula>`
-
-Or `brew tap monoxer/monoxer` and then `brew install <formula>`.
+* `brew tap Monoxer/monoxer`
+* `brew install monoxer-adoptopenjdk8`
+* `brew install monoxer-node`
 
 ## Documentation
 
