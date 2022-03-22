@@ -16,7 +16,7 @@ cask "monoxer-adoptopenjdk8" do
     end
   end
 
-  pkg "OpenJDK8U-jdk_x64_mac_hotspot_8u292b10.pkg"
+  pkg "OpenJDK#{version.csv[0]}U-jdk_x64_mac_hotspot_#{version.csv[0]}u#{version.csv[1]}b#{version.csv[2]}.pkg"
 
   postflight do
     system_command "/usr/sbin/pkgutil", args: ["--pkg-info", "net.adoptopenjdk.8.jdk"], print_stdout: true
