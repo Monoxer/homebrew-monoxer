@@ -4,6 +4,10 @@ cask "monoxer-adoptopenjdk8" do
 
   url "https://github.com/AdoptOpenJDK/openjdk#{version.major}-binaries/releases/download/jdk8u292-b10/OpenJDK8U-jdk_x64_mac_hotspot_8u292b10.pkg",
       verified: "https://github.com/AdoptOpenJDK"
+  name "AdoptOpenJDK 8"
+  desc "AdoptOpenJDK OpenJDK (Java) Development Kit"
+  homepage "https://adoptopenjdk.net/"
+
   livecheck do
     url "https://github.com/adoptopenjdk/openjdk#{version.major}-binaries/releases/latest"
     strategy :page_match do |page|
@@ -11,9 +15,6 @@ cask "monoxer-adoptopenjdk8" do
           .map { |match| "#{match[0]}.#{match[1]},#{match[2]}" }
     end
   end
-  name "AdoptOpenJDK 8"
-  desc "AdoptOpenJDK OpenJDK (Java) Development Kit"
-  homepage "https://adoptopenjdk.net/"
 
   pkg "OpenJDK8U-jdk_x64_mac_hotspot_8u292b10.pkg"
 
