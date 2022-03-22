@@ -10,6 +10,12 @@ class MonoxerNode < Formula
     regex(%r{href=["']?v?(14(?:\.\d+)+)/?["' >]}i)
   end
 
+  bottle do
+    root_url "https://github.com/Monoxer/homebrew-monoxer/releases/download/monoxer-node-14.19.1"
+    sha256 cellar: :any,                 big_sur:      "07efa2f6c0d0678cc41bc38bbaa45a41349f9dab7947ec86102a8ac971c951ba"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "4f6c402452270c2fee94da4d8d4f3451bd4f4292aa1fc60e010dfe189a85e3b1"
+  end
+
   depends_on "pkg-config" => :build
   depends_on "python@3.10" => :build
   depends_on "brotli"
