@@ -27,7 +27,7 @@ cask "monoxer-adoptopenjdk8" do
   def caveats
     <<~EOS
       Add the following to #{shell_profile} or your desired shell configuration file:
-        export JAVA_HOME="/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home"
+        export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home"
     EOS
   end
 end
