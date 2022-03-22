@@ -64,7 +64,6 @@ class MonoxerNode < Formula
     end
   end
 
-  
   def post_install
     (lib/"node_modules/npm/npmrc").atomic_write("prefix = #{HOMEBREW_PREFIX}\n")
   end
