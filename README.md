@@ -4,6 +4,7 @@
 
 * `brew tap Monoxer/monoxer`
 * `brew install monoxer-adoptopenjdk8`
+* (`brew install monoxer-temurin8`)
 * `brew install monoxer-node`
 
 ## Documentation
