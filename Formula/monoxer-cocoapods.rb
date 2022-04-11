@@ -5,6 +5,12 @@ class MonoxerCocoapods < Formula
   sha256 "4f494e7651cdf1a7afae6117fb1ed33c919471d7bc3b7575a68d5c316faf567c"
   license "MIT"
 
+  bottle do
+    root_url "https://github.com/Monoxer/homebrew-monoxer/releases/download/monoxer-cocoapods-1.11.0"
+    sha256                               big_sur:      "45be56e366c91030d3e4e0bc30d77cb987c15b1bfe0eb2e861017a73c050c13b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "70cfd9d41b1eebab1bea0d951a4bb46c544c25631962adbcd6d9b75a299fc602"
+  end
+
   depends_on "pkg-config" => :build
   depends_on "ruby" if Hardware::CPU.arm?
 
