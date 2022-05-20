@@ -3,15 +3,13 @@ require "language/node"
 class Degit < Formula
   desc "Straightforward project scaffolding"
   homepage "https://github.com/Rich-Harris/degit"
-  url "https://github.com/Rich-Harris/degit/archive/refs/tags/v2.8.4.tar.gz"
-  sha256 "3a24a0727e057b0565cab588e93bdf578df43ceaf3495b57dc1aae1ecbf07555"
+  url "https://registry.npmjs.org/degit/-/degit-2.8.4.tgz"
+  sha256 "2fa329afe68038c4c4d1542908503a4a09211d97f326b30a1c7422a8238203de"
   license "MIT"
 
   depends_on "node"
 
   def install
-    system "npm", "install"
-    system "npm", "run", "build"
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)
     bin.install_symlink Dir["#{libexec}/bin/*"]
   end
