@@ -17,6 +17,8 @@ class MonoxerNode < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "4f6c402452270c2fee94da4d8d4f3451bd4f4292aa1fc60e010dfe189a85e3b1"
   end
 
+  keg_only :versioned_formula
+
   depends_on "pkg-config" => :build
   depends_on "python@3.10" => :build
   depends_on "brotli"
@@ -73,6 +75,14 @@ class MonoxerNode < Formula
 
   def post_install
     (lib/"node_modules/npm/npmrc").atomic_write("prefix = #{HOMEBREW_PREFIX}\n")
+  end
+
+  def caveats
+    <<~EOS
+      以下のコードを#{shell_profile}に追記してください！
+      Add the following to #{shell_profile} or your desired shell configuration file:
+        export PATH="#{opt_prefix}/bin"
+    EOS
   end
 
   test do
