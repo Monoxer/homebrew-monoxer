@@ -9,8 +9,9 @@ class Degit < Formula
 
   bottle do
     root_url "https://github.com/Monoxer/homebrew-monoxer/releases/download/degit-2.8.4"
-    sha256 cellar: :any_skip_relocation, big_sur:      "09e05e2aa425a265a3864d5d89df6c11d66d9e13d58fb3139fb6b4edd7b9ed10"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "43d388200d5dac6c7e7a0921bc595d6acbef57490da60dd1088bdaa677b12189"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "94c3fb38ceb7b40b2e60495fc4bd0ae2ac7f31f0daefb720d61da2bc78320c09"
+    sha256 cellar: :any_skip_relocation, big_sur:        "09e05e2aa425a265a3864d5d89df6c11d66d9e13d58fb3139fb6b4edd7b9ed10"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "43d388200d5dac6c7e7a0921bc595d6acbef57490da60dd1088bdaa677b12189"
   end
 
   depends_on "node"
