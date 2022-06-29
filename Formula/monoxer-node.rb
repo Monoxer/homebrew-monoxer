@@ -12,8 +12,9 @@ class MonoxerNode < Formula
 
   bottle do
     root_url "https://github.com/Monoxer/homebrew-monoxer/releases/download/monoxer-node-14.19.3"
-    sha256 cellar: :any,                 big_sur:      "12f9c7447f837a0891304f961bb6b73edb294cbbdee26370d5a1fd115916c431"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "eb868ef3317a8a686818b87910adf822ee0cb46776970cc2b39cdf3530ecc798"
+    sha256 cellar: :any,                 arm64_monterey: "fff3c6112ee1e6e9d3a58e79ddb934f9b758ffbdf2fc5e2786268850915ae206"
+    sha256 cellar: :any,                 big_sur:        "12f9c7447f837a0891304f961bb6b73edb294cbbdee26370d5a1fd115916c431"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eb868ef3317a8a686818b87910adf822ee0cb46776970cc2b39cdf3530ecc798"
   end
 
   keg_only :versioned_formula
