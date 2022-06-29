@@ -1,8 +1,8 @@
 class MonoxerNode < Formula
   desc "Platform built on V8 to build network applications"
   homepage "https://nodejs.org/"
-  url "https://nodejs.org/dist/v14.19.1/node-v14.19.1.tar.xz"
-  sha256 "e1ae09dd861ab39af04483bb5c0fa54ddd82b6b15543be9a27ea6704a8ba9dd9"
+  url "https://nodejs.org/dist/v14.19.3/node-v14.19.3.tar.xz"
+  sha256 "5cf45b1f1aca77523acf36240c1d53a999279070a7711eabf23346f88b0cc994"
   license "MIT"
 
   livecheck do
