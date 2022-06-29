@@ -11,10 +11,9 @@ class MonoxerNode < Formula
   end
 
   bottle do
-    root_url "https://github.com/Monoxer/homebrew-monoxer/releases/download/monoxer-node-14.19.1"
-    rebuild 1
-    sha256 cellar: :any,                 big_sur:      "dbeff440adc8ebeaa78a99c848f06cf528709567b55dc32dee8ba5a29f480cab"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "43591b1913a46604cdc46389457bd1b35f5cdee6fc6fe18f77f457a348281c11"
+    root_url "https://github.com/Monoxer/homebrew-monoxer/releases/download/monoxer-node-14.19.3"
+    sha256 cellar: :any,                 big_sur:      "12f9c7447f837a0891304f961bb6b73edb294cbbdee26370d5a1fd115916c431"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "eb868ef3317a8a686818b87910adf822ee0cb46776970cc2b39cdf3530ecc798"
   end
 
   keg_only :versioned_formula
