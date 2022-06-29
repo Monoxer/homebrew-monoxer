@@ -81,7 +81,7 @@ class MonoxerNode < Formula
     <<~EOS
       以下のコードを#{shell_profile}に追記してください！
       Add the following to #{shell_profile} or your desired shell configuration file:
-        export PATH="#{opt_prefix}/bin"
+        export PATH="#{opt_prefix}/bin:$PATH"
     EOS
   end
 
