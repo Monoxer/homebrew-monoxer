@@ -28,9 +28,11 @@ class MonoxerNode < Formula
   depends_on "libuv"
   depends_on "openssl@1.1"
 
+  uses_from_macos "python"
   uses_from_macos "zlib"
 
   on_macos do
+    depends_on "python@3.10" => [:build, :test]
     depends_on "macos-term-size"
   end
 
