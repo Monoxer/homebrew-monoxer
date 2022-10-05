@@ -7,8 +7,9 @@ class MonoxerRome < Formula
 
   bottle do
     root_url "https://github.com/Monoxer/homebrew-monoxer/releases/download/monoxer-rome-0.24.1.66"
-    sha256 cellar: :any_skip_relocation, big_sur:      "a946535817c7de87ade679660eea4bc3343c9532376f6ba2f0ed14a018777bf7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "2f147c1ba8fd5d0944a1bc51c15a5982796892cfb71a84ba2683f3eccf58ded3"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d8edca066fdf45d21266a6fa995955e5ecc1ef9ac4cb8fe2703218c8b2f06eaf"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a946535817c7de87ade679660eea4bc3343c9532376f6ba2f0ed14a018777bf7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2f147c1ba8fd5d0944a1bc51c15a5982796892cfb71a84ba2683f3eccf58ded3"
   end
 
   depends_on "cabal-install" => :build
