@@ -5,6 +5,11 @@ class Tart < Formula
   sha256 "cb9c2adcd26aca53380816a667dd6d722ebd3e553c9fb530b5b0ebff4f810c86"
   license "AGPL-3.0-or-later"
 
+  bottle do
+    root_url "https://github.com/Monoxer/homebrew-monoxer/releases/download/tart-0.32.1"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "418db64f792a5317a18bf42fe131b8aab42541eb64603f8d387feeba5fa275c0"
+  end
+
   depends_on "rust" => :build
   depends_on xcode: ["14.1", :build]
   depends_on arch: :arm64
