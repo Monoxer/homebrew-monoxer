@@ -1,14 +1,9 @@
 class Tart < Formula
   desc "macOS and Linux VMs on Apple Silicon to use in CI and other automations"
   homepage "https://github.com/cirruslabs/tart#readme"
-  url "https://github.com/cirruslabs/tart/archive/refs/tags/0.32.1.tar.gz"
-  sha256 "cb9c2adcd26aca53380816a667dd6d722ebd3e553c9fb530b5b0ebff4f810c86"
+  url "https://github.com/cirruslabs/tart/archive/refs/tags/0.33.0.tar.gz"
+  sha256 "66c2b3a0b175344bdb2f9a61c7c34e9be935a7f241b3fd44721fe995852581bd"
   license "AGPL-3.0-or-later"
-
-  bottle do
-    root_url "https://github.com/Monoxer/homebrew-monoxer/releases/download/tart-0.32.1"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "418db64f792a5317a18bf42fe131b8aab42541eb64603f8d387feeba5fa275c0"
-  end
 
   depends_on "rust" => :build
   depends_on xcode: ["14.1", :build]
@@ -27,14 +22,15 @@ class Tart < Formula
     resource("softnet").stage do
       system "cargo", "install", *std_cargo_args
     end
-    system "swift", "build", "--disable-sandbox", "-c", "release", "--product", "tart"
+    system "swift", "build", "--disable-sandbox", "-c", "release"
     system "/usr/bin/codesign", "-f", "-s", "-", "--entitlement", "Resources/tart.entitlements", ".build/release/tart"
     bin.install ".build/release/tart"
   end
 
   test do
     ENV["TART_HOME"] = testpath/".tart"
-    system "tart", "create", "test", "--linux"
-    assert_match "test", shell_output("tart list")
+    (testpath/"empty.ipsw").write ""
+    output = shell_output("tart create --from-ipsw #{testpath/"empty.ipsw"} test", 1)
+    assert_match "Unable to load restore image", output
   end
 end
