@@ -7,10 +7,9 @@ class MonoxerCocoapods < Formula
   revision 1
 
   bottle do
-    root_url "https://github.com/Monoxer/homebrew-monoxer/releases/download/monoxer-cocoapods-1.11.0"
-    sha256 cellar: :any,                 arm64_monterey: "dc1686550da5838227cc47f4d25c78c214a818c8f8f9e1d8eaca77ec676b6635"
-    sha256                               big_sur:        "45be56e366c91030d3e4e0bc30d77cb987c15b1bfe0eb2e861017a73c050c13b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "70cfd9d41b1eebab1bea0d951a4bb46c544c25631962adbcd6d9b75a299fc602"
+    root_url "https://github.com/Monoxer/homebrew-monoxer/releases/download/monoxer-cocoapods-1.11.0_1"
+    sha256                               monterey:     "13bb1729f17cabdab636011b26c0784294d342ef824fc7125bde9708baa46f66"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "f51c30de88286d37acdcc95bed4134591c8fe49d30806ea31b8825e11db2af9f"
   end
 
   depends_on "pkg-config" => :build
