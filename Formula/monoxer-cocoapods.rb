@@ -4,6 +4,7 @@ class MonoxerCocoapods < Formula
   url "https://github.com/CocoaPods/CocoaPods/archive/1.11.0.tar.gz"
   sha256 "4f494e7651cdf1a7afae6117fb1ed33c919471d7bc3b7575a68d5c316faf567c"
   license "MIT"
+  revision 1
 
   bottle do
     root_url "https://github.com/Monoxer/homebrew-monoxer/releases/download/monoxer-cocoapods-1.11.0"
