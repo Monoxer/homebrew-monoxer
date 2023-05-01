@@ -35,6 +35,6 @@ class MonoxerRome < Formula
     (testpath/"Cartfile.resolved").write <<~EOS
       github "realm/realm-swift" "v10.20.2"
     EOS
-    assert_match "realm-swift v10.20.2", shell_output("rome list")
+    assert_match "realm-swift v10.20.2", shell_output("#{bin}/rome list")
   end
 end
