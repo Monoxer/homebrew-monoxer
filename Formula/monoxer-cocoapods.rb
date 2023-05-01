@@ -1,10 +1,9 @@
 class MonoxerCocoapods < Formula
   desc "Dependency manager for Cocoa projects"
   homepage "https://cocoapods.org/"
-  url "https://github.com/CocoaPods/CocoaPods/archive/1.11.0.tar.gz"
-  sha256 "4f494e7651cdf1a7afae6117fb1ed33c919471d7bc3b7575a68d5c316faf567c"
+  url "https://github.com/CocoaPods/CocoaPods/archive/1.12.1.tar.gz"
+  sha256 "da018fc61694753ecb7ac33b21215fd6fb2ba660bd7d6c56245891de1a5f061c"
   license "MIT"
-  revision 1
 
   bottle do
     root_url "https://github.com/Monoxer/homebrew-monoxer/releases/download/monoxer-cocoapods-1.11.0_1"
@@ -14,10 +13,8 @@ class MonoxerCocoapods < Formula
   end
 
   depends_on "pkg-config" => :build
-  depends_on "ruby" if Hardware::CPU.arm?
-
+  depends_on "ruby"
   uses_from_macos "libffi", since: :catalina
-  uses_from_macos "ruby", since: :catalina
 
   def install
     if MacOS.version >= :mojave && MacOS::CLT.installed?
