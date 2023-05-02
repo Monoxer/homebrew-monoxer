@@ -14,6 +14,7 @@ class MonoxerRome < Formula
 
   depends_on "cabal-install" => :build
   depends_on "ghc@8.10" => :build
+  depends_on :macos
 
   uses_from_macos "zlib"
 
