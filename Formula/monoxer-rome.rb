@@ -14,6 +14,7 @@ class MonoxerRome < Formula
 
   depends_on "cabal-install" => :build
   depends_on "ghc@8.10" => :build
+  depends_on :macos
 
   uses_from_macos "zlib"
 
@@ -35,6 +36,6 @@ class MonoxerRome < Formula
     (testpath/"Cartfile.resolved").write <<~EOS
       github "realm/realm-swift" "v10.20.2"
     EOS
-    assert_match "realm-swift v10.20.2", shell_output("rome list")
+    assert_match "realm-swift v10.20.2", shell_output("#{bin}/rome list")
   end
 end
