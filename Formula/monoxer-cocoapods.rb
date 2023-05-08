@@ -13,7 +13,9 @@ class MonoxerCocoapods < Formula
   end
 
   depends_on "pkg-config" => :build
+  depends_on :macos
   depends_on "ruby"
+
   uses_from_macos "libffi", since: :catalina
 
   def install
