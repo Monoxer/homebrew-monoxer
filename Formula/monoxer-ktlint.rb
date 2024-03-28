@@ -7,7 +7,10 @@ class MonoxerKtlint < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "89f032b664c5b7b3b4b2bf0d523b2a36a286e5f637cfaca8e149e285fb8b8580"
+    root_url "https://github.com/Monoxer/homebrew-monoxer/releases/download/monoxer-ktlint-1.0.1"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "c9eee66bddf97d4a0aaf930f9c01e0f75158712b36c8db57d3ad225971c53ab7"
+    sha256 cellar: :any_skip_relocation, ventura:      "87b4825eeab2e8b45ae5370e1b018e1d34fcb70354a7dfa67e4f3c8ab0fe4aeb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "b2ccc5e9bff28389d679528b2770d4c6f2639d1db193b1a44d088ae6f1495665"
   end
 
   depends_on "openjdk"
