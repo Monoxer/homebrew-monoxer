@@ -1,6 +1,6 @@
 cask "tartelet" do
-  version "0.8.2"
-  sha256 "707daa1ea5c7bac2e92ac8dc5ad66c4439b50f233d3a616e824d1c174d9c85a9"
+  version "0.9.0"
+  sha256 "4330eab65cefe6c50ecf8b386caf5a08b763f4b5cfd7de9ea4d0165f8a5cade8"
 
   url "https://github.com/shapehq/tartelet/releases/download/#{version}/Tartelet.zip"
   name "Tartelet"
