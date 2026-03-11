@@ -2,8 +2,8 @@
 class MonoxerKtlint < Formula
   desc "Anti-bikeshedding Kotlin linter with built-in formatter"
   homepage "https://ktlint.github.io/"
-  url "https://github.com/pinterest/ktlint/releases/download/1.0.1/ktlint-1.0.1.zip"
-  sha256 "02af5dbeeaa8a6f14bf612c391976c6932c329502b3d3ada1c45d019dcac5ade"
+  url "https://github.com/pinterest/ktlint/releases/download/1.8.0/ktlint-1.8.0.zip"
+  sha256 "3722801dd119b96a2fbeda0b9d66f173994f249998c87bcf2274b51977aa8f77"
   license "MIT"
 
   bottle do
