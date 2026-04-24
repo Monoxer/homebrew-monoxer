@@ -1,5 +1,3 @@
-require "language/node"
-
 class Degit < Formula
   desc "Straightforward project scaffolding"
   homepage "https://github.com/Rich-Harris/degit"
@@ -17,8 +15,8 @@ class Degit < Formula
   depends_on "node"
 
   def install
-    system "npm", "install", *Language::Node.std_npm_args(libexec)
-    bin.install_symlink Dir["#{libexec}/bin/*"]
+    system "npm", "install", *std_npm_args
+    bin.install_symlink libexec.glob("bin/*")
   end
 
   test do
